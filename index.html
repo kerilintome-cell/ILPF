@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ILPF Interativo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a href="#conteudo" class="skip-link">Pular para o conteúdo principal</a>
+
+<header>
+    <h1>🌱 Sistema ILPF</h1>
+
+    <button id="btnContraste">
+        Alto Contraste
+    </button>
+</header>
+
+<main id="conteudo">
+
+<section class="cenario">
+
+    <div class="sol"></div>
+
+    <div class="nuvem n1"></div>
+    <div class="nuvem n2"></div>
+
+    <!-- FLORESTA -->
+
+    <div class="arvore item"
+         tabindex="0"
+         data-titulo="Floresta"
+         data-texto="As árvores fornecem sombra, reduzem a erosão do solo e ajudam na captura de carbono.">
+
+        <div class="copa"></div>
+        <div class="tronco"></div>
+
+    </div>
+
+    <div class="arvore arvore2 item"
+         tabindex="0"
+         data-titulo="Floresta"
+         data-texto="A floresta melhora o microclima e aumenta a biodiversidade da propriedade.">
+
+        <div class="copa"></div>
+        <div class="tronco"></div>
+
+    </div>
+
+    <!-- GADO -->
+
+    <div class="gado item"
+         tabindex="0"
+         data-titulo="Pecuária"
+         data-texto="O gado aproveita a sombra das árvores e fornece matéria orgânica para o solo.">
+
+        <div class="cabeca"></div>
+
+    </div>
+
+    <!-- LAVOURA -->
+
+    <div class="lavoura item"
+         tabindex="0"
+         data-titulo="Lavoura"
+         data-texto="A lavoura produz alimentos e trabalha integrada com a pecuária e a floresta.">
+
+        <div class="planta"></div>
+        <div class="planta"></div>
+        <div class="planta"></div>
+        <div class="planta"></div>
+        <div class="planta"></div>
+
+        <div class="planta"></div>
+        <div class="planta"></div>
+        <div class="planta"></div>
+        <div class="planta"></div>
+        <div class="planta"></div>
+
+    </div>
+
+    <div class="chao"></div>
+
+</section>
+
+<section id="painel" aria-live="polite">
+
+    <h2>Projeto ILPF</h2>
+
+    <p>
+        Clique ou pressione Enter sobre os elementos da maquete.
+    </p>
+
+</section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,269 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#87CEEB;
+}
+
+.skip-link{
+position:absolute;
+left:-9999px;
+}
+
+.skip-link:focus{
+left:10px;
+top:10px;
+background:black;
+color:white;
+padding:10px;
+z-index:1000;
+}
+
+header{
+background:#2E7D32;
+color:white;
+padding:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+button{
+padding:10px 15px;
+cursor:pointer;
+}
+
+.cenario{
+height:70vh;
+position:relative;
+overflow:hidden;
+}
+
+/* SOL */
+
+.sol{
+width:90px;
+height:90px;
+background:gold;
+border-radius:50%;
+position:absolute;
+top:40px;
+right:120px;
+box-shadow:0 0 40px yellow;
+animation:sol 10s linear infinite;
+}
+
+@keyframes sol{
+from{transform:rotate(0deg);}
+to{transform:rotate(360deg);}
+}
+
+/* NUVENS */
+
+.nuvem{
+width:130px;
+height:50px;
+background:white;
+border-radius:50px;
+position:absolute;
+}
+
+.nuvem::before{
+content:"";
+width:60px;
+height:60px;
+background:white;
+border-radius:50%;
+position:absolute;
+left:25px;
+top:-20px;
+}
+
+.n1{
+top:80px;
+animation:nuvem 25s linear infinite;
+}
+
+.n2{
+top:160px;
+animation:nuvem 40s linear infinite;
+}
+
+@keyframes nuvem{
+from{
+left:-200px;
+}
+to{
+left:120%;
+}
+}
+
+/* CHAO */
+
+.chao{
+position:absolute;
+bottom:0;
+width:100%;
+height:35%;
+background:#4CAF50;
+}
+
+/* FLORESTA */
+
+.arvore{
+position:absolute;
+left:120px;
+bottom:130px;
+cursor:pointer;
+}
+
+.arvore2{
+left:250px;
+bottom:145px;
+}
+
+.copa{
+width:90px;
+height:90px;
+background:darkgreen;
+border-radius:50%;
+}
+
+.tronco{
+width:20px;
+height:60px;
+background:#6D4C41;
+margin:auto;
+}
+
+/* GADO */
+
+.gado{
+width:120px;
+height:60px;
+background:#D7CCC8;
+border-radius:15px;
+position:absolute;
+bottom:150px;
+left:45%;
+animation:andar 10s ease-in-out infinite alternate;
+cursor:pointer;
+}
+
+.cabeca{
+width:35px;
+height:35px;
+background:#BCAAA4;
+position:absolute;
+right:-20px;
+top:10px;
+border-radius:10px;
+}
+
+@keyframes andar{
+from{
+left:40%;
+}
+to{
+left:55%;
+}
+}
+
+/* LAVOURA */
+
+.lavoura{
+width:250px;
+height:130px;
+background:#8D6E63;
+border:4px solid #5D4037;
+position:absolute;
+right:80px;
+bottom:100px;
+
+display:grid;
+grid-template-columns:repeat(5,1fr);
+align-items:end;
+justify-items:center;
+
+padding:15px;
+cursor:pointer;
+}
+
+.planta{
+width:6px;
+height:40px;
+background:#2E7D32;
+position:relative;
+animation:vento 2s infinite alternate;
+}
+
+.planta::before{
+content:"";
+width:16px;
+height:8px;
+background:#66BB6A;
+position:absolute;
+left:-12px;
+top:10px;
+border-radius:50%;
+}
+
+.planta::after{
+content:"";
+width:16px;
+height:8px;
+background:#66BB6A;
+position:absolute;
+right:-12px;
+top:20px;
+border-radius:50%;
+}
+
+@keyframes vento{
+from{
+transform:rotate(-5deg);
+}
+to{
+transform:rotate(5deg);
+}
+}
+
+/* PAINEL */
+
+#painel{
+background:white;
+padding:20px;
+margin:20px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,.2);
+}
+
+.item:focus{
+outline:4px solid blue;
+}
+
+/* ALTO CONTRASTE */
+
+.alto-contraste{
+background:black;
+color:white;
+}
+
+.alto-contraste header{
+background:black;
+border-bottom:3px solid yellow;
+}
+
+.alto-contraste #painel{
+background:black;
+color:white;
+border:2px solid yellow;
+}
+
+.alto-contraste .chao{
+background:#222;
+}
